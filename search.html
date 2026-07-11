@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Akira Verse - Search Anime</title>
+    <link rel="stylesheet" href="search.css">
+  </head>
+  <body>
+        <main>
+            <div class="container">
+                <div class="search-anime">  
+                        <input autocomplete="off" type="text"  placeholder="What are you looking for.. ?" id="anime-name" name="anime-name">
+                        <div type="button" id="searchBtn" class="btn"><p>Search</p></div> <br>
+                    </div>
+                        <div id="anime-data" class="anime-data" ></div>
+                    </div>
+                    </main>
+                   <footer class="foot">
+                    <p><b>Copyright &copy; 2024-25 Owned by <a href="http://htedits6299.epizy.com/?i=2" target="_blank"
+                        style="color: rgb(255, 255, 255); "></a></b></p>
+            <img src="/Image/banner.png" height="80px">
+                   </footer>
+
+    <script>
+              const API_URL = 'https://api.jikan.moe/v4';
+        const searchClearButton = document.getElementById('searchBtn');
+        const resultsDiv = document.getElementById('anime-data');
+        const searchInput = document.getElementById('anime-name');
+
+        // Function to perform search or clear
+        const performSearchOrClear = () => {
+            const animeName = searchInput.value;
+
+            if (animeName) {
+                // Clear previous results before fetching new data
+                resultsDiv.innerHTML = '';
+
+                fetch(`${API_URL}/anime?q=${animeName}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Check if there are results
+                        if (data.data && data.data.length > 0) {
+                            data.data.forEach(item => {
+      const anime = item;
+      const id = item.mal_id;
+      const imageUrl = item.images.jpg.image_url;
+      const animeDataDiv = document.createElement('div');
+      animeDataDiv.className = 'card'
+      
+      const userId = id;
+      const basePath = `?id=`+id+`` // Define your base path here
+  const fileName = `watch/anime.html`; // Customize the file name as needed
+  const link = `${fileName}${basePath}`;
+  
+
+
+      animeDataDiv.innerHTML = `
+            <a id ="dataLink" href="${link}"><div class ="image"><img src="${imageUrl}"></div><div class="title"><p>${anime.title_english}</p></div></a>
+            `; // Adjust based on your data structure
+                                resultsDiv.appendChild(animeDataDiv);
+                            });
+                        } else {
+                            resultsDiv.textContent = 'No results found.';
+                        }
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
+            } else {
+                // If no query, clear results and input
+                resultsDiv.innerHTML = ''; // Remove displayed data
+                document.getElementById('searchInput').value = ''; // Clear input
+            }
+        };
+
+        // Add click event to the button
+        searchClearButton.addEventListener('click', performSearchOrClear);
+
+        // Add keydown event to the input for Enter key
+        searchInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                performSearchOrClear();
+            }
+        });
+
+
+
+     /*   const API_URL = 'https://api.jikan.moe/v4';
+      function getAnimeData() {
+        let animeName = document.getElementById('anime-name').value;
+        fetch(`${API_URL}/anime?q=${animeName}&type=tv&type=movie`)
+          .then(response => response.json())
+          .then(data => {
+            const list = data.data;
+           list.map((item) => {
+    const name = item.title;
+    const poster = item.images.jpg.image_url;
+    const movie = `<div class="card"><div class ="image"><img src="${poster}"></div><div class="title"><p>${name}</p></div></div>`
+    document.querySelector('#anime-data').innerHTML += movie;
+  })
+    });
+    }
+    // padding: 20px 40px;  margin: 25px 10px;
+
+    
+     data.data.forEach(item => {
+      const anime = item;
+      const imageUrl = item.images.jpg.image_url;
+      const animeDataDiv = document.createElement('div');
+      animeDataDiv.className = 'card'
+      animeDataDiv.innerHTML = `
+            <div class ="image"><img src="${imageUrl}"></div><div class="title"><p>${anime.title}</p></div>
+            `;
+    
+      document.getElementById('anime-data').appendChild(animeDataDiv);
+      })
+    */
+    
+    </script>
+    
+  </body>
+</html>
