@@ -1,0 +1,451 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    padding: 0;
+    background: rgb(8, 255, 8);
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 30px;
+}
+.im{
+    display: flex;
+    font-size: 25px;
+    font-weight: 800;
+    color: black;
+    cursor: pointer;
+    align-items: center;
+}
+body{
+    background-color: black;
+}
+header{
+    background-color: rgb(8, 255, 8);
+}
+nav ul{
+    list-style: none;
+    margin: auto 0; 
+}
+nav ul li{
+    display: inline-block;
+    position: relative;
+}
+nav ul li a{
+    text-align: center;
+    display: block;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-size: 20px;
+    padding: 20px 25px;
+}
+
+
+nav .search {
+    display: flex;
+    margin: auto 0;
+    height: 35px;
+    line-height: 35px;
+}
+.search input{
+    border: none;
+    outline: none;
+    margin: auto 0;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+    width: 350px;
+    background-color: black;
+    color: white;
+    font-family: "Dancing Script", cursive;
+}
+.container{
+    min-height: calc(100vh - 58px - 12vh);
+    display: flex;
+    justify-content: space-between;
+}
+.card1{
+    width: 60%;
+    margin: 40px 0 0 20px;
+    display: inline-block;
+}
+.card2{
+    width: 30%;
+    margin: 40px;
+}
+.image{
+    display: flex;
+    justify-content: center;
+}
+.image img{
+    width: 100%;
+}
+.title{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title h1{
+    margin: 20px;
+    padding: 5px 5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+.des{
+    text-align: center;
+    margin: 20px;
+    color: white;
+    font-family: "Dancing Script", cursive;
+}
+.deso p{
+    font-family: "Dancing Script", cursive;
+}
+.deso button a{
+    color: white;
+    text-decoration: none;
+}
+.deso button a:hover{
+    color: black;
+    background-color: rgb(8, 255, 8);
+}
+.foot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(8, 255, 8);
+    color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    color: white;
+}
+.infos{
+    display: flex;
+    flex-direction: column;
+   text-align: center;
+   align-items: center;
+    color: white;
+}
+.line{
+    font-family: "Dancing Script", cursive;
+}
+.comp{
+    font-family: "Dancing Script", cursive;
+}
+.line ul li{
+    margin: 20px 0;
+    list-style: none;
+    color: white;
+}
+.poster{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    color: white;
+}
+.posters{
+    display: inline-block;
+    color: white;
+    margin-top: 10px;
+    align-items: center;
+}
+.file{
+    display: flex;
+    justify-content: center;
+    margin: 16px;
+    color: palevioletred;
+}
+.link{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 25px;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.link a{
+    color: darkred;
+}
+.comp{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    color: white;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    background-color: darkblue;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.desi{
+    font-size: 20px;
+    margin: 15px;
+    color: red;
+    font-family: "Dancing Script", cursive;
+}
+.web{
+    display: inline-block;
+    margin: 20px;
+}
+.web button{
+    font-family: sans-serif;
+    font-weight: 900;
+    color: black;
+    padding: 20px;
+    background: rgb(242, 255, 0);
+    border: 2px solid black;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.cards{
+    width: 90%;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 40px;
+    box-shadow: 2px 2px 10px grey;
+    display: inline-block;
+}
+.titlee p{
+    font-family: Arial;
+    color: white;
+    text-align: center;
+    font-size: large;
+    font-weight: 900;
+    padding: 5px 5px;
+}
+.deso{
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+button{
+    margin: 15px 0;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid gray;
+    border-radius: 7px;
+    padding: 5px;
+    cursor: pointer;
+}
+.deso button a:hover{
+    background-color: rgb(8, 255, 8);
+    color: black;
+    transition: .5s;
+}
+.deso button:hover{
+    background-color: rgb(8, 255, 8);
+    color: black;
+    transition: .5s;
+}
+.cards:hover{
+    box-shadow: none;
+}
+.para{
+    margin-bottom: 20px;
+    color: white;
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+}
+.pp{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.thou{
+    padding: 0 30px;
+    color: crimson;
+    font-family: "Dancing Script", cursive;
+}
+.author{
+    margin: 10px 0;
+    padding-left: 20px;
+    color: white;
+}
+.web button a{
+    color: black;
+    text-decoration: none;
+}
+.web button:hover{
+    background-color: black;
+    color: yellow;
+    transition: .5s;
+}
+.web button a:hover{
+    color: yellow;
+}
+.im{
+    margin-right: 20px;
+}
+.link{
+    display: inline-block;
+    color: white;
+}
+.link a{
+    margin: 0 20px;
+}
+nav .bar{
+    position: relative;
+    margin: auto;
+    display: none;
+}
+nav .bar span{
+    position: absolute;
+    color: black;
+    font-size: 35px;
+}
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    display: none;
+}
+nav .searchs span{
+    position: relative;
+    margin: auto;
+    display: none;
+}
+#preloader{
+    background: #000 url(/Image/load.gif) no-repeat center center;
+    background-size: 15%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+ul li ul.dropdown li{
+    display: block;
+    padding: 0;
+    font-size: 20px;
+    width: 100%;
+    border-top: 1px solid black;
+}
+ul li ul.dropdown{
+    width: 200px;
+    left: 0;
+    background: #fff;
+    color: #000;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover{
+    background: #000000;
+    color: #ffffff;
+}
+ul li:hover ul.dropdown{
+    display: initial;
+}
+ul li ul.dropdown li ul{
+    display: none;
+    position: absolute;
+    left: 200px;
+    top: 10px;
+    background: #fff;
+    color: #000;
+}
+ul li ul.dropdown li ul li{
+    background: #fff;
+    color: #000;
+    margin: auto;
+    padding: 0;
+    border-top: 1px solid white;
+}
+ul li ul.dropdown li ul li:hover {
+    background: #000;
+    color: #fff;
+}
+ul li ul.dropdown li:hover ul{
+    display: initial;
+}
+.images{
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.images:before{
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+}
+.images iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.online{
+    display: flex;
+    justify-content: center;
+}
+.online button{
+    padding: 30px 60px;
+    color: white;
+    font-size: larger;
+}
+.online button:hover{
+    color: black;
+    background-color: rgb(24, 255, 24);
+    transition: 0.5s;
+}
+a{
+    text-decoration: none;
+}
+footer img{
+    height: 80px;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.card2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    height: 500px;
+    width: fit-content;
+    overflow-y: scroll;
+}
+.characters{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.characters img{
+    height: 150px;
+    width: 150px;
+}
+
+
+
+
+
